@@ -1,0 +1,122 @@
+
+******************************Important Commands For Ubuntu*****************************
+
+
+"apt list --installed" :- To list all the installed Packages.
+
+"sudo apt-get install <PackageName>" :-To install a package.
+
+"sudo apt-get update" :- To check for update.
+
+"sudo apt-get upgrade" :- To update Packages.
+
+"sudo apt-get dist-upgrade" :- To update Major Packages.
+
+"sudo apt-get remove <PackageName>" :- To remove a Package.
+
+"sudo apt-get purge <PackageName>" :-  To remove a package and its systemwide configuration files.
+
+"sudo apt-get purge --auto-remove <PackageName>" :- To remove a package along with its systemwide configuration files and its dependencies.
+
+"apt-cache rdepends <PackageName>" :- To get the list of dependencies of a Package.
+
+---->>>>Aptitude is a package manager 
+(After installing aptitude write in terminal the given bellow commands)
+
+"aptitude search <PackageName>" :- To search for a Package
+
+"sudo aptitude install <PackageName>" :- To install a Package <<<<----
+
+
+
+
+
+The man page for apt-get has the following information -
+
+   remove
+       remove is identical to install except that packages are removed
+       instead of installed. Note that removing a package leaves its
+       configuration files on the system. If a plus sign is appended to
+       the package name (with no intervening space), the identified
+       package will be installed instead of removed.
+
+   purge
+       purge is identical to remove except that packages are removed and
+       purged (any configuration files are deleted too).
+
+Therefore, if you wish to delete all the configuration files of a particular package along with it, purge is the better option. However, if you wish to retain the configuration files, remove should be used.
+
+   -y, --yes, --assume-yes
+       Automatic yes to prompts; assume "yes" as answer to all prompts and
+       run non-interactively. If an undesirable situation, such as
+       changing a held package, trying to install a unauthenticated
+       package or removing an essential package occurs then apt-get will
+       abort. Configuration Item: APT::Get::Assume-Yes.
+
+The -y flag does not remove dependencies but instead skips the user confirmation for the removal of the package, assuming it as a 'Yes' in the Y/N prompt.
+
+For removing a package that is causing problems or need not be installed again, the best option is :-
+
+apt-get purge <packagename>
+
+This is because if the configuration files for an application have been modified in a way that caused errors, purge will remove them, effectively making the subsequent install appear as a fresh install.
+
+NOTE : The purge option does not apply to packages that hold configuration files inside the user's home folder. Refer to this answer for additional details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
